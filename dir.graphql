@@ -1,0 +1,45 @@
+msme-order-automation/
+│
+├── client/                      # Frontend (EJS Templates)
+│   ├── views/                   # EJS views folder
+│   │   ├── index.ejs            # Landing Page
+│   │   ├── login.ejs            # Login/Register Page
+│   │   ├── catalog.ejs          # Product Catalog Page
+│   │   ├── cart.ejs             # Cart Page
+│   │   ├── checkout.ejs         # Checkout Page
+│   │   ├── admin-dashboard.ejs  # Admin Dashboard Page
+│   ├── partials/                # Reusable EJS partials (header, footer, etc.)
+│   │   ├── header.ejs           # Header partial
+│   │   └── footer.ejs           # Footer partial
+│   ├── css/                     # CSS files
+│   │   └── styles.css           # Main CSS file
+│   ├── js/                      # JavaScript files
+│   │   ├── app.js               # Main JS for dynamic functionality
+│   │   ├── cart.js              # JS for cart operations
+│   │   └── admin.js             # JS for admin operations
+│
+├── server/                      # Backend
+│   ├── config/                  # Configuration files (e.g., database, environment variables)
+│   │   └── db.js                # Database connection
+│   ├── controllers/             # API Logic
+│   │   ├── userController.js    # User-related APIs (register, login)
+│   │   ├── productController.js # Product-related APIs (fetch, create, update)
+│   │   └── orderController.js   # Order-related APIs (place order, view history)
+│   ├── models/                  # Database Models (ORM for PostgreSQL)
+│   │   ├── userModel.js         # User model
+│   │   ├── productModel.js      # Product model
+│   │   └── orderModel.js        # Order model
+│   ├── routes/                  # API Routes
+│   │   ├── userRoutes.js        # Routes for user operations
+│   │   ├── productRoutes.js     # Routes for product operations
+│   │   └── orderRoutes.js       # Routes for order operations
+│   ├── services/                # Third-party API integrations (WhatsApp, Twilio)
+│   │   └── notificationService.js  # Notification sending (Twilio/WhatsApp API)
+│   ├── utils/                   # Utility functions (e.g., authentication, validation)
+│   │   └── auth.js              # Authentication middleware
+│   ├── app.js                   # Main application file
+│   └── package.json             # Project dependencies
+│
+├── .env                         # Environment variables (DB credentials, API keys)
+├── README.md                    # Project documentation
+└── LICENSE                      # Project license
