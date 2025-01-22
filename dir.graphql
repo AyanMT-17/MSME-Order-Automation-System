@@ -1,45 +1,35 @@
-msme-order-automation/
+msme-automation/
+├── backend/                    # Backend folder
+│   ├── models/                 # Database models (e.g., users, products, orders)
+│   ├── routes/                 # Express route handlers
+│   ├── controllers/            # Business logic for routes
+│   ├── middlewares/            # Middleware for authentication, error handling, etc.
+│   ├── db.js                   # Database connection file
+│   ├── app.js                  # Main server file
+│   ├── package.json            # Backend dependencies
+│   └── .env                    # Environment variables
 │
-├── client/                      # Frontend (EJS Templates)
-│   ├── views/                   # EJS views folder
-│   │   ├── index.ejs            # Landing Page
-│   │   ├── login.ejs            # Login/Register Page
-│   │   ├── catalog.ejs          # Product Catalog Page
-│   │   ├── cart.ejs             # Cart Page
-│   │   ├── checkout.ejs         # Checkout Page
-│   │   ├── admin-dashboard.ejs  # Admin Dashboard Page
-│   ├── partials/                # Reusable EJS partials (header, footer, etc.)
-│   │   ├── header.ejs           # Header partial
-│   │   └── footer.ejs           # Footer partial
-│   ├── css/                     # CSS files
-│   │   └── styles.css           # Main CSS file
-│   ├── js/                      # JavaScript files
-│   │   ├── app.js               # Main JS for dynamic functionality
-│   │   ├── cart.js              # JS for cart operations
-│   │   └── admin.js             # JS for admin operations
+├── frontend/                   # Frontend folder
+│   ├── public/                 # Public assets (favicon, index.html)
+│   ├── src/                    # React source files
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── Navbar.jsx      # Top navigation bar
+│   │   │   ├── Footer.jsx      # Footer component
+│   │   │   └── Button.jsx      # Example reusable button component
+│   │   ├── pages/              # Pages for the app
+│   │   │   ├── Home.jsx        # Landing page
+│   │   │   ├── Products.jsx    # Product catalog page
+│   │   │   ├── Cart.jsx        # Cart and checkout page
+│   │   │   ├── Dashboard.jsx   # Admin dashboard page
+│   │   │   └── NotFound.jsx    # 404 error page
+│   │   ├── utils/              # Utility functions (e.g., API calls, helpers)
+│   │   │   └── api.js          # Axios or fetch API functions
+│   │   ├── App.js              # Main React app file with routes
+│   │   ├── index.js            # React entry point
+│   │   ├── index.css           # Global styles
+│   │   └── tailwind.config.js  # TailwindCSS configuration
+│   └── package.json            # Frontend dependencies
 │
-├── server/                      # Backend
-│   ├── config/                  # Configuration files (e.g., database, environment variables)
-│   │   └── db.js                # Database connection
-│   ├── controllers/             # API Logic
-│   │   ├── userController.js    # User-related APIs (register, login)
-│   │   ├── productController.js # Product-related APIs (fetch, create, update)
-│   │   └── orderController.js   # Order-related APIs (place order, view history)
-│   ├── models/                  # Database Models (ORM for PostgreSQL)
-│   │   ├── userModel.js         # User model
-│   │   ├── productModel.js      # Product model
-│   │   └── orderModel.js        # Order model
-│   ├── routes/                  # API Routes
-│   │   ├── userRoutes.js        # Routes for user operations
-│   │   ├── productRoutes.js     # Routes for product operations
-│   │   └── orderRoutes.js       # Routes for order operations
-│   ├── services/                # Third-party API integrations (WhatsApp, Twilio)
-│   │   └── notificationService.js  # Notification sending (Twilio/WhatsApp API)
-│   ├── utils/                   # Utility functions (e.g., authentication, validation)
-│   │   └── auth.js              # Authentication middleware
-│   ├── app.js                   # Main application file
-│   └── package.json             # Project dependencies
-│
-├── .env                         # Environment variables (DB credentials, API keys)
-├── README.md                    # Project documentation
-└── LICENSE                      # Project license
+├── README.md                   # Project documentation
+├── .gitignore                  # Git ignore file
+└── .env                        # Global environment variables (if needed)
