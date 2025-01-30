@@ -10,6 +10,6 @@ Admin Dashboard: Manage products, monitor orders, and view sales reports.
 Role-Based Access: Separate access levels for admins and staff for secure operations.
 Technology Stack:
 
-Frontend: HTML, CSS, JavaScript
+Frontend: HTML, CSS, JavaScript, React, Tailwind
 Backend: Node.js, Express.js
 Database: PostgreSQL
