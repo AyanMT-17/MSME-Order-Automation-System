@@ -1,0 +1,12 @@
+msmse-order-automation-backend-pg/
+├── config/
+│   └── db.js
+├── routes/
+│   ├── user.js
+│   ├── admin.js
+│   └── order.js
+├── middleware/
+│   └── auth.js
+├── .env
+├── app.js
+└── package.json

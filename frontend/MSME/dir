@@ -1,0 +1,22 @@
+msmse-order-automation-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── AdminDashboard.jsx
+│   │   ├── UserDashboard.jsx
+│   │   └── PlaceOrder.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Admin.jsx
+│   │   └── User.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json

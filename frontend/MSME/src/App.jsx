@@ -1,43 +1,35 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import AdminDashboard from './components/AdminDashboard';
-import UserDashboard from './components/UserDashboard';
-import './app.css';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Define the router with routes
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Navigate to="/login" /> // Redirect to login page by default
-  },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/signup',
-    element: <SignUp />
-  },
-  {
-    path: '/admindashboard',
-    element: <AdminDashboard />
-  },
-  {
-    path: '/userdashboard',
-    element: <UserDashboard />
-  },
-  {
-    path: '*',
-    element: <h1>404 - Page Not Found</h1>
-  }
-]);
+
+
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/login" element={<Login />} />
+<Route path="/register" element={<Register />} />
+<Route path="/admin" element={<Admin />} />
+<Route path="/user" element={<User />} />
+</Routes>
 
 function App() {
+
+  const routes = createBrowserRouter([
+    {
+      path: '/',
+      element: <Login />,
+    },
+  ])
+
+  const [count, setCount] = useState(0)
+
   return (
-    <RouterProvider router={router} />
-  );
+    <>
+    <RouterProvider value={routes} />
+    </>
+  )
 }
 
-export default App;
+export default App
